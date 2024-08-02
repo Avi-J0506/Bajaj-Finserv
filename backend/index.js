@@ -9,6 +9,10 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get('/',(req, res)=>{
+  res.send("Include /bfhl in the url");
+})
+
 app.get("/bfhl", (req, res) => {
   res.status(200).json({ operation_code: 1 });
 });
